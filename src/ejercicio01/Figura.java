@@ -3,9 +3,12 @@ package ejercicio01;
 
 //clase Figura
 public class Figura extends Object {//Solo porque el ejercicio decia que toString era heredado de la clase objeto
-	String nombre;					// no estoy seguro todavia si funciona igual sin el "extends Object"
-	Punto puntomedio;
-	String color;
+	protected String nombre;					// no estoy seguro todavia si funciona igual sin el "extends Object"
+	protected Punto puntomedio;
+	protected String color;
+	//Queria dejarlos en "private"
+	//pero no podia usar las variables para la funcion toString de rectangulo
+	//asi que solo quedaran en "protected"
 	
 //Constructor de la clase
 	public Figura(String nombre,int coordenadaX,int coordenadaY,String color) {
@@ -18,9 +21,9 @@ public class Figura extends Object {//Solo porque el ejercicio decia que toStrin
 @Override //Se supone que esto asegura que el metodo de esta clase sobreescriba el metodo de clase objeto 
 	public String toString() {//Devuelve una descripcion de los atributos de la clase Figura 
 		return String.format("%s: %s %s \n%s: %s\n%s: %.2f\n%s: %.2f",
-				"nombre: ", this.nombre,
+				"Nombre: ", this.nombre,
 				"Punto Medio: ", this.puntomedio.toString(),
-				"Color:", this.color);	
+				"Color: ", this.color);	
 	}
 
 //Revisa el color de la figura
