@@ -30,13 +30,13 @@ public class Rectangulo extends Figura {
 	
 	@Override 
 	public String toString() {//Devuelve una descripcion de los atributos de la subclase Rectangulo
-		return String.format("%s \n %s: %s\n %s: %s\n %s: %s\n %s: %d\n %s: %d",
+		return String.format("%s \n %s: %s\n %s: %s\n %s: %s\n %s: %d\n %s: %d",//Define formato
 				"Tipo de Figura: Rectangulo",
-				"Nombre: ", this.nombre,
-				"Punto Medio: ", this.puntomedio.toString(),
-				"Color: ", this.color,
-				"Lado Mayor: ", this.LadoMayor,
-				"Lado Menor: ", this.LadoMenor);	
+				"Nombre", this.nombre,
+				"Punto Medio", this.puntomedio.toString(),
+				"Color", this.color,
+				"Lado Mayor", this.LadoMayor,
+				"Lado Menor", this.LadoMenor);	
 	}
 	
 	//Metodo para obtener el Area del Rectangulo

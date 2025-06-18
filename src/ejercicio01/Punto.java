@@ -17,7 +17,7 @@ public class Punto {
 	@Override
 	public String toString() {
 		return String.format("%s: %d\n %s: %d", //Esto define el formato que se necesita: "%s" para cadenas; y "%d" para numeros
-								"Coordenada X: ", this.coordenadaX ,
-								"Coordenada Y: ", this.coordenadaY);
+								"Coordenada X", this.coordenadaX ,
+								"Coordenada Y", this.coordenadaY);
 	}
 }

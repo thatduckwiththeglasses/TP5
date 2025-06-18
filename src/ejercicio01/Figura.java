@@ -21,9 +21,9 @@ public class Figura extends Object {//Solo porque el ejercicio decia que toStrin
 @Override //Se supone que esto asegura que el metodo de esta clase sobreescriba el metodo de clase objeto 
 	public String toString() {//Devuelve una descripcion de los atributos de la clase Figura 
 		return String.format("%s: %s\n %s: %s\n %s: %s",//Define el formato
-				"Nombre: ", this.nombre,
-				"Punto Medio: ", this.puntomedio.toString(),
-				"Color: ", this.color);	
+				"Nombre", this.nombre,
+				"Punto Medio", this.puntomedio.toString(),
+				"Color", this.color);	
 	}
 
 //Revisa el color de la figura
