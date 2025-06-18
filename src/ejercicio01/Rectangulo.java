@@ -2,9 +2,9 @@ package ejercicio01;
 
 //Subclase Rectangulo
 public class Rectangulo extends Figura {
-	protected int LadoMayor;
-	protected int LadoMenor;
-	
+	protected long LadoMayor;
+	protected long LadoMenor;
+	//No estoy seguro si deberia dejarlo como entero o hacerlo "double"
 
 	//Constructor de la subclase Rectangulo
 	public Rectangulo(String nombre ,int coordenadaX,int coordenadaY ,String color , int ladoM,int ladom) {
@@ -40,14 +40,26 @@ public class Rectangulo extends Figura {
 	}
 	
 	//Metodo para obtener el Area del Rectangulo
-	public int GetArea() {
+	public long GetArea() {
 		return this.LadoMenor * this.LadoMayor;
 	}
 	
 	//Metodo para obtener el Perimetro del Rectangulo
-	public int GetPerimetro() {
+	public long GetPerimetro() {
 		return (2 * this.LadoMenor) + (2 * this.LadoMayor);
 	}
 	
-	//PARA HACER: codear un metodo para cambiar el tamaño del rectangulo
+	//Metodo para cambiar el tamaño del rectangulo
+	public void SetSize(double factor) {
+		if (factor > 0) {
+			this.LadoMayor = Math.round(this.LadoMayor * factor);//Se redondea para poder guardar el nuevo tamaño del rectangulo
+			this.LadoMenor = Math.round(this.LadoMenor * factor);
+		} else if (factor < 0) {
+			this.LadoMayor = Math.round(this.LadoMayor * (factor * -1));//Si ocurre que se ingresa un valor negativo, 
+			this.LadoMenor = Math.round(this.LadoMenor * (factor * -1));//el resultado sera el mismo
+		} else {
+			this.LadoMayor = 1;//Si el valor es 0 se resetea el tamaño a 1
+			this.LadoMenor = 1;
+		}
+	}
 }
