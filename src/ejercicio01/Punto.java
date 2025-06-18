@@ -3,8 +3,8 @@ package ejercicio01;
 
 //Clase Punto que utiliza en la clase Figura
 public class Punto {
-	int coordenadaX;
-	int coordenadaY;
+	Integer coordenadaX;
+	Integer coordenadaY;
 	
 //Constructor de la clase Punto
 	public Punto(int coorX,int coorY) {
@@ -16,10 +16,8 @@ public class Punto {
 //metodo toString sobreescrito para la clase Punto: devuelve una lista de las coordenadas
 	@Override
 	public String toString() {
-		String coorX_string = String.format("%d",this.coordenadaX);
-		String coorY_string = String.format("%d",this.coordenadaY);
-		return String.format("%s: %s %s \n%s: %s\n%s: %.2f\n%s: %.2f",
-								"Coordenada X: ", coorX_string,
-								"Coordenada Y: ", coorY_string);
+		return String.format("%s: %d\n %s: %d", //Esto define el formato que se necesita: "%s" para cadenas; y "%d" para numeros
+								"Coordenada X: ", this.coordenadaX ,
+								"Coordenada Y: ", this.coordenadaY);
 	}
 }

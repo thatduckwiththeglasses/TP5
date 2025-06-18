@@ -30,7 +30,7 @@ public class Rectangulo extends Figura {
 	
 	@Override 
 	public String toString() {//Devuelve una descripcion de los atributos de la subclase Rectangulo
-		return String.format("%s: %s %s \n%s: %s\n%s: %.2f\n%s: %.2f",
+		return String.format("%s \n %s: %s\n %s: %s\n %s: %s\n %s: %d\n %s: %d",
 				"Tipo de Figura: Rectangulo",
 				"Nombre: ", this.nombre,
 				"Punto Medio: ", this.puntomedio.toString(),
